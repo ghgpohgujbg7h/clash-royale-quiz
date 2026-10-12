@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clash Royale Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <span class="logo">Clash Royale Quiz</span>
+        <span id="progress" class="progress">Question 1 / 10</span>
+      </header>
+
+      <main class="quiz-card">
+        <div id="quiz-container">
+          <h1 id="question">Question text</h1>
+          <div id="answers" class="answers"></div>
+
+          <div class="footer-bar">
+            <button id="next-btn" class="next-btn hidden">Next</button>
+          </div>
+        </div>
+
+        <div id="result" class="result hidden">
+          <h2>Quiz Finished!</h2>
+          <p id="score-text"></p>
+          <button id="restart-btn" class="restart-btn">Play Again</button>
+        </div>
+      </main>
+
+      <footer class="credit">Made by Abdulrahman</footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
