@@ -9,8 +9,20 @@
   <body>
     <div class="app">
       <header class="topbar">
-        <span class="logo">Clash Royale Quiz</span>
-        <span id="progress" class="progress">Question 1 / 10</span>
+        <div class="left">
+          <span class="logo">Clash Royale Quiz</span>
+          <div class="lang-toggle">
+            <button id="enBtn" class="lang active">EN</button>
+            <button id="arBtn" class="lang">AR</button>
+          </div>
+        </div>
+        <div class="right">
+          <div id="progress" class="progress">Question 1 / 10</div>
+          <div id="timer" class="timer">
+            <div id="timerBar" class="timer-bar"></div>
+            <div id="timerText" class="timer-text">15s</div>
+          </div>
+        </div>
       </header>
 
       <main class="quiz-card">
@@ -26,6 +38,7 @@
         <div id="result" class="result hidden">
           <h2>Quiz Finished!</h2>
           <p id="score-text"></p>
+          <div id="score-anim" class="score-anim">0</div>
           <button id="restart-btn" class="restart-btn">Play Again</button>
         </div>
       </main>
