@@ -1,0 +1,121 @@
+:root {
+  --bg1: #0a1020;
+  --bg2: #132744;
+  --panel: rgba(15, 23, 34, 0.9);
+  --gold: #f5b700;
+  --gold-soft: #ffd86d;
+  --cyan: #59c6ff;
+  --green: #2ecc71;
+  --red: #ff5d5d;
+  --text: #edf7ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(245,183,0,0.18), transparent 18%),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: var(--text);
+}
+
+.game-shell {
+  width: min(95vw, 980px);
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(12,18,32,0.95), rgba(16,25,38,0.96));
+  border: 2px solid var(--gold);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.title {
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #101922;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.hud {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255,255,255,0.08);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 2px solid rgba(255,255,255,0.12);
+  background: linear-gradient(180deg, #08111b, #112236 38%, #0d1f30 100%);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #121b22;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+}
+
+.credit {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--text);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .topbar,
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
